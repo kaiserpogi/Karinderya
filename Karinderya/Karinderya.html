@@ -68,6 +68,33 @@
       margin-top: 0;
     }
 
+    .menu-item button {
+      margin-top: 10px;
+      padding: 5px 10px;
+      background-color: #6a994e;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .menu-item button:hover {
+      background-color: #5a8b44;
+    }
+
+    #order-summary {
+      margin-top: 30px;
+      background-color: #fefae0;
+      padding: 20px;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+    }
+
+    #order-summary ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
     footer {
       background-color: #6a994e;
       color: white;
@@ -94,20 +121,30 @@
     <div class="menu-items">
       <div class="menu-item">
         <h3>Adobo</h3>
-        <p>₱80 - Classic chicken/pork in soy sauce & vinegar</p>
+        <p>₱80</p>
+        <button onclick="addToOrder('Adobo', 80)">Add to Order</button>
       </div>
       <div class="menu-item">
         <h3>Sinigang</h3>
-        <p>₱90 - Sour tamarind soup with vegetables & pork</p>
+        <p>₱90</p>
+        <button onclick="addToOrder('Sinigang', 90)">Add to Order</button>
       </div>
       <div class="menu-item">
         <h3>Kare-Kare</h3>
-        <p>₱100 - Peanut stew with bagoong on the side</p>
+        <p>₱100</p>
+        <button onclick="addToOrder('Kare-Kare', 100)">Add to Order</button>
       </div>
       <div class="menu-item">
         <h3>Fried Tilapia</h3>
-        <p>₱75 - Crispy outside, juicy inside</p>
+        <p>₱75</p>
+        <button onclick="addToOrder('Fried Tilapia', 75)">Add to Order</button>
       </div>
+    </div>
+
+    <div id="order-summary">
+      <h3>Your Order</h3>
+      <ul id="order-list"></ul>
+      <p><strong>Total: ₱<span id="total">0</span></strong></p>
     </div>
   </section>
 
@@ -130,6 +167,20 @@
   <footer>
     <p>&copy; 2025 Nagkaon ka na lab? | Lutong bahay, lutong puso 💖</p>
   </footer>
+
+  <script>
+    let total = 0;
+    const orderList = document.getElementById('order-list');
+    const totalDisplay = document.getElementById('total');
+
+    function addToOrder(item, price) {
+      const listItem = document.createElement('li');
+      listItem.textContent = `${item} - ₱${price}`;
+      orderList.appendChild(listItem);
+      total += price;
+      totalDisplay.textContent = total;
+    }
+  </script>
 
 </body>
 </html>
