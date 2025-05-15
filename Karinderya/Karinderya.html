@@ -1,11 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <title>Nagkaon ka na lab?</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background-color: #fff8f0;
+      color: #333;
+    }
+
+    header {
+      background-color: #e63946;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    header p {
+      margin: 5px 0 0;
+      font-size: 1.2em;
+      font-style: italic;
+    }
+
+    nav {
+      background-color: #ffb703;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .menu-items {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .menu-item {
+      background-color: #fff;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      width: 200px;
+      text-align: center;
+      padding: 15px;
+    }
+
+    .menu-item h3 {
+      margin-top: 0;
+    }
+
+    footer {
+      background-color: #6a994e;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
 </head>
 <body>
-    
+
+  <header>
+    <h1>Nagkaon ka na lab?</h1>
+    <p>Home-cooked goodness, lutong karinderya!</p>
+  </header>
+
+  <nav>
+    <a href="#menu">Menu</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="menu" class="section">
+    <h2>Menu</h2>
+    <div class="menu-items">
+      <div class="menu-item">
+        <h3>Adobo</h3>
+        <p>₱80 - Classic chicken/pork in soy sauce & vinegar</p>
+      </div>
+      <div class="menu-item">
+        <h3>Sinigang</h3>
+        <p>₱90 - Sour tamarind soup with vegetables & pork</p>
+      </div>
+      <div class="menu-item">
+        <h3>Kare-Kare</h3>
+        <p>₱100 - Peanut stew with bagoong on the side</p>
+      </div>
+      <div class="menu-item">
+        <h3>Fried Tilapia</h3>
+        <p>₱75 - Crispy outside, juicy inside</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <h2>About Us</h2>
+    <p>
+      "Nagkaon ka na lab?" is your neighborhood karinderya serving lutong-bahay favorites 
+      with a whole lot of love. We’re proud to bring Filipino comfort food straight to your plate, 
+      whether you're on your lunch break or just missing the taste of home.
+    </p>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact & Location</h2>
+    <p>📍 123 Barangay St., Poblacion, Philippines</p>
+    <p>📞 0912-345-6789</p>
+    <p>🕐 Open daily: 8AM - 8PM</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Nagkaon ka na lab? | Lutong bahay, lutong puso 💖</p>
+  </footer>
+
 </body>
 </html>
