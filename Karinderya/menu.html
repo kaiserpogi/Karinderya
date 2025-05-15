@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nagkaon ka na lab? - Menu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Nagkaon ka na lab?</h1>
+    <p>Home-cooked goodness, lutong karinderya!</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <section class="section">
+    <h2>Our Menu</h2>
+    <div class="menu-items">
+      <div class="menu-item">
+        <h3>Adobo</h3>
+        <p>₱80</p>
+        <button onclick="addToOrder('Adobo', 80)">Add to Order</button>
+      </div>
+      <div class="menu-item">
+        <h3>Sinigang</h3>
+        <p>₱90</p>
+        <button onclick="addToOrder('Sinigang', 90)">Add to Order</button>
+      </div>
+      <div class="menu-item">
+        <h3>Kare-Kare</h3>
+        <p>₱100</p>
+        <button onclick="addToOrder('Kare-Kare', 100)">Add to Order</button>
+      </div>
+      <div class="menu-item">
+        <h3>Fried Tilapia</h3>
+        <p>₱75</p>
+        <button onclick="addToOrder('Fried Tilapia', 75)">Add to Order</button>
+      </div>
+    </div>
+
+    <div id="order-summary">
+      <h3>Your Order</h3>
+      <ul id="order-list"></ul>
+      <p><strong>Total: ₱<span id="total">0</span></strong></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Nagkaon ka na lab?</p>
+  </footer>
+
+  <script>
+    let total = 0;
+    const orderList = document.getElementById('order-list');
+    const totalDisplay = document.getElementById('total');
+
+    function addToOrder(item, price) {
+      const listItem = document.createElement('li');
+      listItem.textContent = `${item} - ₱${price}`;
+      orderList.appendChild(listItem);
+      total += price;
+      totalDisplay.textContent = total;
+    }
+  </script>
+</body>
+</html>
